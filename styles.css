@@ -15,16 +15,49 @@ body {
     color: var(--clr-secondary);
 }
 
+main {
+    width: 80%;
+    height: 100vh;
+    margin: 40px auto 0;
+}
+
+/*Global*/
+
 h1 {
-    font-size: 2em;
+    font-size: 1.6em;
+}
+
+h3 {
+    margin: 30px 0;
+}
+
+.circle {
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--clr-secondary);
+    background-image: linear-gradient(270deg, var(--clr-secondary), var(--clr-primary));
+    position: absolute;
+}
+
+.circle-small {
+    width: 80px;
+    height: 80px;
+}
+
+.circle-medium {
+    width: 120px;
+    height: 120px;
+}
+
+.circle-big {
+    width: 200px;
+    height: 200px;
 }
 
 .flex-row {
-    width: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
+    position: relative;
 }
 
 .container {
@@ -32,6 +65,50 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    position: relative;
+}
+
+a {
+    padding: 10px 25px;
+    margin: 30px 0 0;
+    background-color: var(--clr-primary);
+    border: 2px solid var(--clr-secondary);
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--clr-secondary);
+    box-shadow: 0 0 5px var(--clr-secondary);
+}
+
+a:hover {
+    background-color: var(--clr-secondary);
+    border: 2px solid var(--clr-secondary);
+    color: var(--clr-primary);
+    box-shadow: none;
+}
+
+img {
+    background-position: center;
+    background-size: cover;
+    width: 70%;
+    height: auto;
+    box-shadow: 0 0 30px 5px var(--clr-secondary);
+    border-radius: 40px;
+}
+
+hr {
+    border: none;
+    border-bottom: 2px solid var(--clr-secondary);
+    border-color: var(--clr-secondary);
+    box-shadow: 0 0 5px var(--clr-secondary);
+    margin: 60px 0;
+}
+
+/*Structure*/
+
+#first-section .circle-medium {
+    bottom: 0;
+    left: 30%;
 }
 
 #first-section .container {
@@ -42,36 +119,20 @@ h1 {
 h1 span {
     display: block;
     color: #ff0101;
-    margin: 20px 0;
+    margin: 20px 0 0;
 }
 
-h3 {
-    margin: 30px 0;
+#first-section .circle-big {
+    right: 40%;
+    top: 0;
 }
 
 #first-section img {
     background-image: url(images/Group\ 8449.png);
-    background-position: center;
-    background-size: cover;
-    margin-top: -80px;
-    width: 40%;
-    box-shadow: 0 0 30px 5px var(--clr-secondary);
-    border-radius: 40px;
+    align-self: flex-end;
 }
 
-a {
-    padding: 10px 25px;
-    margin: 30px 0;
-    background-color: var(--clr-primary);
-    border: 2px solid var(--clr-secondary);
-    border-radius: 10px;
-    font-weight: 600;
-    text-decoration: none;
-    color: var(--clr-secondary);
-}
-
-a:hover {
-    background-color: var(--clr-secondary);
-    border: 2px solid var(--clr-secondary);
-    color: var(--clr-primary);
+#first-section .circle-small {
+    right: 52%;
+    top: 0;
 }
