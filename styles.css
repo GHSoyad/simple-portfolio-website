@@ -2,6 +2,7 @@
     --clr-aqua: aqua;
     --clr-black: black;
     --clr-yellow: yellow;
+    --clr-green: rgb(0, 255, 0);
 }
 
 * {
@@ -17,7 +18,7 @@
 body {
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.95);
     color: var(--clr-aqua);
     text-shadow: 0 0 3px var(--clr-black);
     scrollbar-width: none;
@@ -31,12 +32,16 @@ main {
 
 
 /*Global*/
-
 h1 {
     font-size: 1.6em;
 }
 
+h2 {
+    font-size: 1.4em;
+}
+
 h3 {
+    font-size: 1.2em;
     margin: 30px 0;
 }
 
@@ -117,8 +122,8 @@ hr#yellow-hr {
 
 
 /*Structure*/
-/*first-section*/
 
+/*first-section*/
 #first-section .circle {
     box-shadow: -5px 0 15px var(--clr-aqua), 5px 0 10px rgba(0, 255, 255, 0.2);
     background-image: linear-gradient(270deg, var(--clr-aqua), var(--clr-black));
@@ -172,7 +177,6 @@ h1 span {
 }
 
 /*second-section*/
-
 #second-section {
     color: var(--clr-yellow)
 }
@@ -217,12 +221,38 @@ h1 span {
     right: 20%;
 }
 
-/*Responsive for mobile*/
+/* third section */
+#third-section h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
 
-@media screen and (max-width:600px) {
+#third-section .flex-row {
+    align-items: flex-start;
+    text-align: center;
+}
+
+#third-section .container {
+    width: 45%;
+    align-items: center;
+    justify-content: flex-start;
+    border: 3px solid var(--clr-green);
+    border-radius: 10px;
+    height: 300px;
+    padding: 15px;
+    overflow-y: scroll;
+}
+
+#third-section h3 {
+    color: var(--clr-yellow)
+}
+
+
+/*Responsive for mobile*/
+@media screen and (max-width:768px) {
     main {
         margin: auto;
-        padding: 40px 5% 0;
+        padding: 40px 5%;
         overflow-x: hidden;
     }
 
@@ -283,6 +313,17 @@ h1 span {
     #second-section .circle-medium {
         bottom: -5%;
         right: -15%;
+    }
+
+    #third-section .container {
+        width: calc(100% - 26px);
+        margin: 0 auto;
+        height: min-content;
+        padding: 10px;
+    }
+
+    #third-section .left-side {
+        margin-top: 40px;
     }
 
 }
