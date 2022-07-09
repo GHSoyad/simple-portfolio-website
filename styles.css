@@ -24,8 +24,9 @@ body {
 }
 
 main {
-    width: 80%;
-    margin: 60px auto 0;
+    max-width: 1400px;
+    margin: 60px auto;
+    padding: 0 10% 0;
 }
 
 
@@ -119,7 +120,7 @@ hr#yellow-hr {
 /*first-section*/
 
 #first-section .circle {
-    box-shadow: -5px 0 15px var(--clr-aqua), 5px 0 15px var(--clr-black);
+    box-shadow: -5px 0 15px var(--clr-aqua), 5px 0 10px rgba(0, 255, 255, 0.2);
     background-image: linear-gradient(270deg, var(--clr-aqua), var(--clr-black));
 }
 
@@ -131,7 +132,7 @@ hr#yellow-hr {
 
 h1 span {
     display: block;
-    color: #ff0101;
+    color: #fe0000;
     margin: 20px 0 0;
 }
 
@@ -177,7 +178,7 @@ h1 span {
 }
 
 #second-section .circle {
-    box-shadow: 5px 0 15px var(--clr-yellow), -5px 0 15px var(--clr-black);
+    box-shadow: 5px 0 15px var(--clr-yellow), -5px 0 10px rgba(255, 255, 0, 0.2);
     background-image: linear-gradient(90deg, var(--clr-yellow), var(--clr-black));
 }
 
@@ -216,12 +217,13 @@ h1 span {
     right: 20%;
 }
 
-
+/*Responsive for mobile*/
 
 @media screen and (max-width:600px) {
     main {
-        width: 90%;
-        margin: 40px auto 0;
+        margin: auto;
+        padding: 40px 5% 0;
+        overflow-x: hidden;
     }
 
     .flex-row {
@@ -241,7 +243,7 @@ h1 span {
 
     #first-section .circle-small {
         left: -10%;
-        top: 0;
+        top: 1%;
     }
 
     #first-section .circle-big {
@@ -255,7 +257,7 @@ h1 span {
     }
 
     #first-section .circle-medium {
-        bottom: 40%;
+        bottom: 35%;
         left: -20%;
     }
 
@@ -265,16 +267,16 @@ h1 span {
     }
 
     #second-section .circle-small {
-        top: 55%;
+        top: 48%;
         left: 80%;
-        box-shadow: 0 5px 15px var(--clr-yellow), 0 -5px 15px var(--clr-black);
+        box-shadow: 0 5px 15px var(--clr-yellow), -5px 0 10px rgba(255, 255, 0, 0.2);
         background-image: linear-gradient(135deg, var(--clr-yellow), var(--clr-black));
     }
 
     #second-section .circle-big {
         top: 53%;
         left: -30%;
-        box-shadow: 0 5px 15px var(--clr-yellow), 0 -5px 15px var(--clr-black);
+        box-shadow: 0 5px 15px var(--clr-yellow), -5px 0 10px rgba(255, 255, 0, 0.2);
         background-image: linear-gradient(225deg, var(--clr-yellow), var(--clr-black));
     }
 
