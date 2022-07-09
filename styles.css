@@ -18,7 +18,7 @@
 body {
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: #0c1022;
     color: var(--clr-aqua);
     text-shadow: 0 0 3px var(--clr-black);
     scrollbar-width: none;
@@ -26,7 +26,7 @@ body {
 
 main {
     max-width: 1400px;
-    margin: 60px auto;
+    margin: 60px auto 20px;
     padding: 0 10% 0;
 }
 
@@ -93,6 +93,7 @@ a {
     font-weight: 600;
     text-decoration: none;
     text-shadow: none;
+    transition: 0.3s;
 }
 
 img {
@@ -108,21 +109,31 @@ hr {
     margin: 60px 0;
 }
 
-hr#aqua-hr {
+.hr-aqua {
     border-bottom: 2px solid var(--clr-aqua);
     border-color: var(--clr-aqua);
     box-shadow: 0 0 5px var(--clr-aqua);
 }
 
-hr#yellow-hr {
+.hr-yellow {
     border-bottom: 2px solid var(--clr-yellow);
     border-color: var(--clr-yellow);
     box-shadow: 0 0 5px var(--clr-yellow);
 }
 
+.hr-green {
+    border-bottom: 2px solid var(--clr-green);
+    border-color: var(--clr-green);
+    box-shadow: 0 0 5px var(--clr-green);
+}
+
+.green {
+    color: var(--clr-green);
+    text-shadow: 0 0 3px var(--clr-green);
+}
+
 
 /*Structure*/
-
 /*first-section*/
 #first-section .circle {
     box-shadow: -5px 0 15px var(--clr-aqua), 5px 0 10px rgba(0, 255, 255, 0.2);
@@ -137,8 +148,9 @@ hr#yellow-hr {
 
 h1 span {
     display: block;
-    color: #fe0000;
     margin: 20px 0 0;
+    color: var(--clr-green);
+    text-shadow: 0 0 10px var(--clr-green);
 }
 
 #first-section a {
@@ -223,8 +235,10 @@ h1 span {
 
 /* third section */
 #third-section h1 {
+    color: var(--clr-green);
     text-align: center;
     margin-bottom: 40px;
+    text-shadow: 0 0 10px var(--clr-green);
 }
 
 #third-section .flex-row {
@@ -234,17 +248,29 @@ h1 span {
 
 #third-section .container {
     width: 45%;
+    height: 300px;
     align-items: center;
     justify-content: flex-start;
     border: 3px solid var(--clr-green);
     border-radius: 10px;
-    height: 300px;
     padding: 15px;
     overflow-y: scroll;
+    box-shadow: 0 0 5px var(--clr-green);
+    transition: 0.3s;
+}
+
+#third-section .container:hover {
+    box-shadow: 0 0 20px var(--clr-green);
 }
 
 #third-section h3 {
     color: var(--clr-yellow)
+}
+
+footer {
+    text-align: center;
+    font-size: .7em;
+    margin: 40px 0;
 }
 
 
@@ -252,7 +278,7 @@ h1 span {
 @media screen and (max-width:768px) {
     main {
         margin: auto;
-        padding: 40px 5%;
+        padding: 40px 5% 20px;
         overflow-x: hidden;
     }
 
@@ -317,7 +343,6 @@ h1 span {
 
     #third-section .container {
         width: calc(100% - 26px);
-        margin: 0 auto;
         height: min-content;
         padding: 10px;
     }
@@ -326,4 +351,15 @@ h1 span {
         margin-top: 40px;
     }
 
+    footer {
+        margin: 0;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .block {
+        display: block;
+    }
 }
